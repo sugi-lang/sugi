@@ -55,7 +55,5 @@ Here the variable (sum) first stores the value 3. But since it is mutable becaus
 
 You can also multiply (*) and divide (/).
 
-If you would like to see more, consider donating at https://liberapay.com/CubeGuy21/
-
 
 
