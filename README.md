@@ -25,31 +25,39 @@ Lets create a hello world program.
 In a text editor, type: 
 
 ```v
-println "Hello World!"
+func ⮟ ⮝ ⮞
+  println "Hello World!"
+#func
 ```
 
 That's it. Next let's do some simple arithmetic. 
 
 ```v
-+ $sum 1 2
+func ⮟ ⮝ ⮞
+  + $sum 1 2
+#func
 ```
 Whats going on here is that the first word of every statement (+) is a function keyword, and the words coming after are it's parameters. The (+) function keyword has three parameters. The first is a variable (sum) that can store a value. Variables are first declared with a ($) before the variable. The last 2 parameters are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
 
 By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operators.
 
 ```v
-+ $sum 1 2
-- $sum2 sum 2
-println "My two numbers are {} and {}" sum sum2
+func ⮟ ⮝ ⮞
+  + $sum 1 2
+  - $sum2 sum 2
+  println "My two numbers are {} and {}" sum sum2
+#func
 ```
 Here, the value stored in (sum) is used in the next statement for subtraction. Then both values of the variables (sum and sum2) are used in the println statement.
 
 Lastly, what if we want to make a variable mutable so that it can change values without being declared again? Easy:
 
 ```v
-+ $sum [mut] 1 2
-- sum 4 2
-println "sum is: {}" sum
+func ⮟ ⮝ ⮞
+  + $sum [mut] 1 2
+  - sum 4 2
+  println "sum is: {}" sum
+#func
 ```
 Here the variable (sum) first stores the value 3. But since it is mutable because of ([mut]) after it, the variable (sum) can store a different value. The next statement replaces the value stored in the sum variable with 2.
 
