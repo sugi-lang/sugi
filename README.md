@@ -25,7 +25,7 @@ Lets create a hello world program.
 In a text editor, type: 
 
 ```v
-func ⮟ ⮝ ⮞
+func main ⮟ ⮝ ⮞
   println "Hello World!"
 #func
 ```
@@ -33,7 +33,7 @@ func ⮟ ⮝ ⮞
 That's it. Next let's do some simple arithmetic. 
 
 ```v
-func ⮟ ⮝ ⮞
+func main ⮟ ⮝ ⮞
   + $sum 1 2
 #func
 ```
@@ -42,7 +42,7 @@ Whats going on here is that the first word of every statement (+) is a function 
 By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operators.
 
 ```v
-func ⮟ ⮝ ⮞
+func main ⮟ ⮝ ⮞
   + $sum 1 2
   - $sum2 sum 2
   println "My two numbers are {} and {}" sum sum2
@@ -53,7 +53,7 @@ Here, the value stored in (sum) is used in the next statement for subtraction. T
 Lastly, what if we want to make a variable mutable so that it can change values without being declared again? Easy:
 
 ```v
-func ⮟ ⮝ ⮞
+func main ⮟ ⮝ ⮞
   + $sum [mut] 1 2
   - sum 4 2
   println "sum is: {}" sum
