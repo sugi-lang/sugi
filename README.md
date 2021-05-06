@@ -59,9 +59,45 @@ func main ⮟ ⮝ ⮞
   println "sum is: {}" sum
 #func
 ```
+
 Here the variable (sum) first stores the value 3. But since it is mutable because of ([mut]) after it, the variable (sum) can store a different value. The next statement replaces the value stored in the sum variable with 2.
 
 You can also multiply (*) and divide (/).
 
+You can specify a type for a variable by including the type in brackets:
 
+```v
+func main ⮟ ⮝ ⮞
+  + $sum [mut i32] 1 2
+  - sum 4 2
+  println "sum is: {}" sum
+#func
+```
 
+Lets create a function and call it:
+
+```v
+func main ⮟ ⮝ ⮞
+  print "Hello World!"
+#func
+
+func print ⮟ message: &str ⮝ ⮞
+  println "{}" message
+#func
+```
+
+Next lets create a different kind of function:
+
+```v
+func main ⮟ ⮝ ⮞
+  add $sum 200 400
+  println "{}" sum
+#func
+
+:func add ⮟ int1: i32, int2: i32 ⮝ i32 ⮞
+  + $var int1 int2
+  return var
+#func
+```
+
+The (:func) keyword makes the (add) function behave a little differently. Instead of just returning a value or printing a line, the add function returns a value and stores it in a variable. The variable name is the first argument of the (add) function.
