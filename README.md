@@ -90,7 +90,7 @@ Next lets create a different kind of function:
 
 ```v
 func main ⮟ ⮝ ⮞
-  add $sum 200 400
+  add $sum [i32] 200 400
   println "{}" sum
 #func
 
