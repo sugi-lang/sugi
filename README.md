@@ -101,3 +101,27 @@ func main ⮟ ⮝ ⮞
 ```
 
 The (:func) keyword makes the (add) function behave a little differently. Instead of just returning a value or printing a line, the add function returns a value and stores it in a variable. The variable name is the first argument of the (add) function.
+
+You can define if, else, and else_if expressions like this:
+
+```v
+func main ⮟ ⮝ ⮞
+
+  < $cond1 2 4
+  > $cond2 7 5
+  && $cond3 cond1 cond2
+
+  if cond3 ⮞
+    println "yo"
+  #if
+
+  else_if cond1 ⮞
+    println "yoyo"
+  #else_if
+  
+  else ⮞
+    println "yoyoyo"
+  #else
+
+#func
+```
