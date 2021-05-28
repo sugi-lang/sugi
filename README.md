@@ -54,13 +54,13 @@ Lastly, what if we want to make a variable mutable so that it can change values 
 
 ```v
 func main ⮟ ⮝ ⮞
-  + $sum [mut] 1 2
+  + ~sum 1 2
   - sum 4 2
   println "sum is: {}" sum
 #func
 ```
 
-Here the variable (sum) first stores the value 3. But since it is mutable because of ([mut]) after it, the variable (sum) can store a different value. The next statement replaces the value stored in the sum variable with 2.
+Here the variable (sum) first stores the value 3. But since it is mutable because of (~) before it, the variable (sum) can store a different value. The next statement replaces the value stored in the sum variable with 2.
 
 You can also multiply (*) and divide (/).
 
@@ -68,7 +68,7 @@ You can specify a type for a variable by including the type in brackets:
 
 ```v
 func main ⮟ ⮝ ⮞
-  + $sum [mut i32] 1 2
+  + ~sum 1 2
   - sum 4 2
   println "sum is: {}" sum
 #func
@@ -90,11 +90,11 @@ Next lets create a different kind of function:
 
 ```v
 func main ⮟ ⮝ ⮞
-  add $sum [i32] 200 400
+  add $sum i64(200) i64(400)
   println "{}" sum
 #func
 
-:func add ⮟ int1: i32, int2: i32 ⮝ i32 ⮞
+:func add ⮟ int1: i64, int2: i64 ⮝ i64 ⮞
   + $var int1 int2
   return var
 #func
