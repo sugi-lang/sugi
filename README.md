@@ -25,7 +25,7 @@ Lets create a hello world program.
 In a text editor, type: 
 
 ```v
-func main [] [] [
+fn main [] [] [
   println "Hello World!"
 ]
 ```
