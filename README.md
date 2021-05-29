@@ -37,7 +37,7 @@ fn main [] [] [
   + $sum 1 2
 ]
 ```
-Whats going on here is that the first word of every statement (+) is a function keyword, and the words coming after are it's parameters. The (+) function keyword has three parameters. The first is a variable (sum) that can store a value. Variables are first declared with a ($) before the variable. The last 2 parameters are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
+Whats going on here is that the first word of every statement (+) is a function keyword, and the words coming after are it's arguments. The (+) function keyword has three parameters. The first is a variable (sum) that can store a value. Variables are first declared with a ($) before the variable. The last 2 parameters are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
 
 By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operators.
 
@@ -64,11 +64,11 @@ Here the variable (sum) first stores the value 3. But since it is mutable becaus
 
 You can also multiply (*) and divide (/).
 
-You can specify a type for a variable by including the type in brackets:
+You can specify a type for a variable by including the type to it's operands:
 
 ```v
 fn main [] [] [
-  + ~sum 1 2
+  + ~sum i32(1) i32(2)
   - sum 4 2
   println "sum is: {}" sum
 ]
@@ -81,7 +81,7 @@ fn main [] [] [
   print "Hello World!"
 ]
 
-fn print [message: &str] [] [
+fn print [message: string] [] [
   println "{}" message
 ]
 ```
@@ -100,7 +100,7 @@ fn main [] [] [
 ]
 ```
 
-The (:func) keyword makes the (add) function behave a little differently. Instead of just returning a value or printing a line, the add function returns a value and stores it in a variable. The variable name is the first argument of the (add) function.
+The (:fn) keyword makes the (add) function behave a little differently. Instead of just returning a value or printing a line, the add function returns a value and stores it in a variable. The variable name is the first argument of the (add) function.
 
 You can define if, else, and else_if expressions like this:
 
