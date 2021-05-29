@@ -33,7 +33,7 @@ func main [] [] [
 That's it. Next let's do some simple arithmetic. 
 
 ```v
-func main [] [] [
+fn main [] [] [
   + $sum 1 2
 ]
 ```
@@ -42,7 +42,7 @@ Whats going on here is that the first word of every statement (+) is a function 
 By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operators.
 
 ```v
-func main [] [] [
+fn main [] [] [
   + $sum 1 2
   - $sum2 sum 2
   println "My two numbers are {} and {}" sum sum2
@@ -53,7 +53,7 @@ Here, the value stored in (sum) is used in the next statement for subtraction. T
 Lastly, what if we want to make a variable mutable so that it can change values without being declared again? Easy:
 
 ```v
-func main [] [] [
+fn main [] [] [
   + ~sum 1 2
   - sum 4 2
   println "sum is: {}" sum
@@ -67,7 +67,7 @@ You can also multiply (*) and divide (/).
 You can specify a type for a variable by including the type in brackets:
 
 ```v
-func main [] [] [
+fn main [] [] [
   + ~sum 1 2
   - sum 4 2
   println "sum is: {}" sum
@@ -77,11 +77,11 @@ func main [] [] [
 Lets create a function and call it:
 
 ```v
-func main [] [] [
+fn main [] [] [
   print "Hello World!"
 ]
 
-func print [message: &str] [] [
+fn print [message: &str] [] [
   println "{}" message
 ]
 ```
@@ -89,12 +89,12 @@ func print [message: &str] [] [
 Next lets create a different kind of function:
 
 ```v
-func main [] [] [
+fn main [] [] [
   add $sum i64(200) i64(400)
   println "{}" sum
 ]
 
-:func add [int1: i64, int2: i64] [i64] [
+:fn add [int1: i64, int2: i64] [i64] [
   + $var int1 int2
   return var
 ]
@@ -105,7 +105,7 @@ The (:func) keyword makes the (add) function behave a little differently. Instea
 You can define if, else, and else_if expressions like this:
 
 ```v
-func main [] [] [
+fn main [] [] [
 
   < $cond1 2 4
   > $cond2 7 5
