@@ -109,7 +109,7 @@ fn main run
 #:fn
 ```
 
-The (:fn) keyword makes the (add) function behave a little differently. Instead of just returning a value, the add function also stores the returned value in a variable. The variable name is the first argument of the (add) function.
+The (:fn) keyword makes the (add) function behave a little differently. Instead of just returning a value, the add function also stores the returned value in a variable. The variable name is the first operand of the (add) keyword.
 
 You can define if, else, and else_if expressions like this:
 
