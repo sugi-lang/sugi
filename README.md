@@ -27,7 +27,7 @@ A .v file will be generated in the same directory.
 
 # Tutorial
 
-(The project is evolving quickly. This tutorial is a presentation of ideas and does not work yet.)
+The project is evolving quickly. This tutorial is a presentation of ideas and is not ready for use.
   
 Lets create a hello world program.
 
