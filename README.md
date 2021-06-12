@@ -65,7 +65,7 @@ What if we want to make a variable mutable so that it can change values?:
 fn main [
   +; sum 1 2
   - sum 4 2
-  println "Sum is $sum"
+  println "sum is $sum"
 ]
 ```
 
