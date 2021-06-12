@@ -46,7 +46,7 @@ fn main [
   +: sum 1 2
 ]
 ```
-Whats going on here is that the first word of every statement (+:) is a keyword, and the words coming after are it's operands. The (:) part of the keyword declares and initializes a variable as immutable. The (+) function keyword has three operands. The first operand is a variable (sum) that can store a value. The last two operands are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
+Whats going on here is that the first word of every statement (+:) is a keyword, and the words coming after are it's operands. The (:) part of the keyword declares and initializes a variable as immutable. The (+:) keyword has three operands. The first operand is a variable (sum) that can store a value. The last two operands are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
 
 A statement can only contain one keyword. By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operations.
 
