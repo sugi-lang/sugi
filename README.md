@@ -134,3 +134,19 @@ fn main [
     
 ]
 ```
+
+You can assign variables to individual values like this:
+    
+fn main [
+    
+    bind; name "bob"
+    bind name "henry"
+    
+    println "name is $name"
+    
+]
+    
+    
+    
+    
+    
