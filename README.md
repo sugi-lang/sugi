@@ -62,25 +62,25 @@ Here, the value stored in (sum) is used in the next statement for subtraction. T
 What if we want to make a variable mutable so that it can change values?:
 
 ```v
-fn main run
+fn main [
   +; sum 1 2
   - sum 4 2
   println "Sum is $sum"
-#fn
+]
 ```
 
-Here the variable (sum) first stores the value 3. But since it is declared and initialized as mutable because of (;) in the keyword, the variable (sum) can store a different value. The next statement replaces the value stored in the (sum) variable with the value: 2. 
+Here the variable (sum) stores the value 3. But since it is declared and initialized as mutable because of (;) in the keyword, the variable (sum) can store a different value. The next statement replaces the value stored in the (sum) variable with the value: 2. 
 
 You can also multiply (*) and divide (/).
 
 You can specify a type for a variable by including the type to it's operands:
 
 ```v
-fn main run
+fn main [
   +; sum i32(1) i32(2)
   - sum 4 2
   println "sum is $sum"
-#fn
+]
 ```
 
 Lets create a function and call it:
