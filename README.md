@@ -1,5 +1,5 @@
 # sugi
-A sequential and minimal programming language seeking the ultimate syntax.
+A sequential and minimalistic programming language seeking the ultimate syntax.
 
 # Install on linux
 Install the vlang programming language. Instructions are at https://github.com/vlang/v/blob/master/doc/docs.md.
@@ -27,49 +27,49 @@ A .v file will be generated in the same directory.
 
 # Tutorial
 
-(The project is still in its infancy, so some parts of this tutorial will not work yet.)
+(The project is evolving quickly. This tutorial is a presentation of ideas and does not work yet.)
   
 Lets create a hello world program.
 
 In a text editor, type: 
 
 ```v
-fn main run
+fn main [
   println "Hello World!"
-#fn
+]
 ```
 
 That's it. Next let's do some simple arithmetic. 
 
 ```v
-fn main run
-  + sum val 1 2
-#fn
+fn main [
+  +: sum 1 2
+]
 ```
-Whats going on here is that the first word of every statement (+) is a keyword, and the words coming after are it's operands. The (+) function keyword has four operands. The first is a variable (sum) that can store a value. Next is the (val) operand. It initializes the variable and declares it as immutable. The last two operands are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
+Whats going on here is that the first word of every statement (+:) is a keyword, and the words coming after are it's operands. The (:) part of the keyword declares and initializes a variable as immutable. The (+) function keyword has three operands. The first operand is a variable (sum) that can store a value. The last two operands are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
 
-Statements follow a logical form with an english equivalent of verb, noun, then adjective. A statement can only contain one keyword. By typing more than one statement in a sequence, we can code in a sequential style. All this makes reading code much easier. Lets do some other math operators.
+A statement can only contain one keyword. By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operators.
 
 ```v
-fn main run
-  + sum val 1 2
-  - difference  val 2 1
+fn main [
+  +: sum 1 2
+  -: difference 2 1
   println "The sum is $sum and the difference is $difference"
-#fn
+]
 ```
-Here, the value stored in (sum) is used in the next statement for subtraction. Then both values of the variables (sum and sum2) are used in the println statement.
+Here, the value stored in (sum) is used in the next statement for subtraction. Then both values of the variables (sum and difference) are used in the println statement.
 
-What if we want to make a variable mutable so that it can change values without being declared again?:
+What if we want to make a variable mutable so that it can change values?:
 
 ```v
 fn main run
-  + sum var 1 2
+  +; sum 1 2
   - sum 4 2
   println "Sum is $sum"
 #fn
 ```
 
-Here the variable (sum) first stores the value 3. But since it is mutable because of (var) after it, the variable (sum) can store a different value. The next statement replaces the value stored in the (sum) variable with 2.
+Here the variable (sum) first stores the value 3. But since it is declared and initialized as mutable because of (;) in the keyword, the variable (sum) can store a different value. The next statement replaces the value stored in the (sum) variable with the value: 2. 
 
 You can also multiply (*) and divide (/).
 
@@ -77,7 +77,7 @@ You can specify a type for a variable by including the type to it's operands:
 
 ```v
 fn main run
-  + sum var i32(1) i32(2)
+  +; sum i32(1) i32(2)
   - sum 4 2
   println "sum is $sum"
 #fn
@@ -86,53 +86,51 @@ fn main run
 Lets create a function and call it:
 
 ```v
-fn main run
+fn main [
   print "Hello World!"
-#fn
+]
 
-fn print in message: string run
-  println "{}" message
-#fn
+fn_in print [message string] [
+  println "$message"
+]
 ```
 
 Next lets create a different kind of function:
 
 ```v
-fn main run
-  add sum val i64(200) i64(400)
+fn main [
+  add: sum val i64(200) i64(400)
   println "$sum"
-#fn
+]
 
-:fn add in int1: i64, int2: i64 out i64 run
-  + sum val int1 int2
+fn_in_out add [int1 i64 int2 i64] [i64] [
+  +: sum int1 int2
   return sum
-#:fn
+]
 ```
-
-The (:fn) keyword makes the (add) function behave a little differently. Instead of just returning a value, the add function also stores the returned value in a variable. The variable name is the first operand of the (add) keyword.
 
 You can define if, else, and else_if expressions like this:
 
 ```v
-fn main run
+fn main [
 
-  < cond_one val 2 4
-  > cond_two val 7 5
-  && cond_three val cond_one cond_two
+  <: cond_one 2 4
+  >: cond_two 7 5
+  &&: cond_three cond_one cond_two
 
-  if cond_three
+  if cond_three [
     
     println "yo"
     
-  #if else_if cond_one
+  ] else_if cond_one [
     
     println "yoyo"
     
-  #else_if else
+  ] else [
     
     println "yoyoyo"
     
-  #else
+  ]
     
-#fn
+]
 ```
