@@ -53,7 +53,7 @@ A statement can only contain one keyword. By typing more than one statement in a
 ```v
 fn main [
   +: sum 1 2
-  -: difference 2 1
+  -: difference sum 1
   println "The sum is $sum and the difference is $difference"
 ]
 ```
@@ -83,7 +83,7 @@ fn main [
 ]
 ```
 
-Lets create a function and call it:
+Lets create a function that accepts arguments as input and call it:
 
 ```v
 fn main [
@@ -95,7 +95,7 @@ fn_in print [message string] [
 ]
 ```
 
-Next lets create a different kind of function:
+Next lets create another kind of function that accepts arguments as input and returns values as output:
 
 ```v
 fn main [
