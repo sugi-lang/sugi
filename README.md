@@ -137,6 +137,7 @@ fn main [
 
 You can assign variables to individual values like this:
     
+```v
 fn main [
     
     bind; name "bob"
@@ -145,7 +146,7 @@ fn main [
     println "name is $name"
     
 ]
-    
+```
     
     
     
