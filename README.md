@@ -36,6 +36,7 @@ fn main [
   println "Hello World!"
 ]
 ```
+Save this code to a file named `hello.su`. Then enter: `sugi hello.su`
 
 That's it. Next let's do some simple arithmetic. 
 
