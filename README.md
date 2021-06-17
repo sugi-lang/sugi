@@ -36,7 +36,9 @@ fn main [
   println "Hello World!"
 ]
 ```
-Save this code to a file named `hello.su`. Then enter: `sugi hello.su`
+Save this code to a file named `hello.su`. Then enter: `sugi hello.su`.
+  
+`main` is the starting point of the program. `println` is a built-in function thats prints the value passed to it.
 
 That's it. Next let's do some simple arithmetic. 
 
