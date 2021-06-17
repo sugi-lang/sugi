@@ -26,8 +26,6 @@ The program should execute.
 A .v file will be generated in the same directory.
 
 # Tutorial
-
-The project is evolving quickly. This tutorial is a presentation of ideas and is not ready for use.
   
 Lets create a hello world program.
 
@@ -103,7 +101,7 @@ fn main [
   println "$sum"
 ]
 
-fn_in_out add [int1 i64 int2 i64] [i64] [
+fn_in_out add [int1 i64, int2 i64] [i64] [
   +: sum int1 int2
   return sum
 ]
