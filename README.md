@@ -75,7 +75,7 @@ You can specify a type for a variable by including the type to it's operands:
 
 ```v
 fn main [
-  +; sum i32(1) i32(2)
+  +; sum i8(1) i8(2)
   - sum 4 2
   println "sum is $sum"
 ]
