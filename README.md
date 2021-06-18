@@ -103,12 +103,12 @@ Next lets create another kind of function that accepts arguments as input and re
 
 ```v
 fn main
-  add: sum val i64(200) i64(400)
+  add {val} sum val i64(200) i64(400)
   println "$sum"
 #fn
 
 fn {in out} add [int1 i64, int2 i64 | i64]
-  +: sum int1 int2
+  + {val} sum int1 int2
   return sum
 #fn
 ```
