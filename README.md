@@ -25,7 +25,7 @@ Enter the command: sugi <filename of .su file>.
 The program should execute.
 A .v file will be generated in the same directory.
 
-##Tutorial
+## Tutorial
   
 This project is evolving quickly. The tutorial is a presentation of ideas and is not ready for use yet.
   
