@@ -29,6 +29,13 @@ A .v file will be generated in the same directory.
   
 This project is evolving quickly. The tutorial is a presentation of ideas and is not ready for use yet.
   
+# Rules of the language
+  
+1. A statement can only have one function symbol, called a keyword. 
+2. Statements containing blocks of code such as `fn` or `if` must end with the same keyword preceded by a `#`.
+3. Words inside curly brackets `{}` are a function's properties and decide what operands come after a keyword and how the function behaves.
+4. Functions with a variable amount of arguments can be grouped into brackets. A right and left bracket beside each other `][` is replaced with `|`.
+  
 ## Hello World
 
 In a text editor, type: 
