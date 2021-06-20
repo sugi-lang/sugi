@@ -33,7 +33,7 @@ This project is evolving quickly. The tutorial is a presentation of ideas and is
   
 1. A statement can only have one function symbol, called a keyword. 
 2. Statements containing blocks of code such as `fn` or `if` must end with the same keyword preceded by a `#`.
-3. Words inside curly brackets `{}` are a function's properties and decide what operands come after a keyword and how the function behaves.
+3. Words inside curly brackets `{}` are a function's variants and decide what operands come after a keyword and how the function behaves.
 4. Functions with a variable amount of arguments can be grouped into brackets. A right and left bracket beside each other `][` is replaced with `|`.
   
 ## Hello World
@@ -110,7 +110,7 @@ Next lets create another kind of function that accepts arguments as input and re
 
 ```v
 fn main
-  add {val} sum val i64(200) i64(400)
+  add {val} sum i64(200) i64(400)
   println "$sum"
 #fn
 
