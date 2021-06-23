@@ -122,11 +122,13 @@ if cond_three
     
   println "yo"
     
-#if else_if cond_one
+#if 
+else_if cond_one
     
   println "yoyo"
     
-#else_if else
+#else_if 
+else
     
   println "yoyoyo"
     
