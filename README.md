@@ -27,8 +27,6 @@ A .v file will be generated in the same directory.
 
 ## Tutorial
   
-This project is evolving quickly. The tutorial is a presentation of ideas and is not ready for use yet.
-  
 # Rules of the language
   
 1. A statement can only have one function symbol, called a keyword. 
