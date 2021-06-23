@@ -25,7 +25,7 @@ Enter the command: sugi <filename of .su file>.
 The program should execute.
 A .v file will be generated in the same directory.
 
-## Tutorial
+# Tutorial
   
 # Rules of the language
   
@@ -34,7 +34,7 @@ A .v file will be generated in the same directory.
 3. Words inside curly brackets `{}` are a function's variants and decide what operands come after a keyword and how the function behaves.
 4. Functions with a variable amount of arguments can be grouped into brackets. A right and left bracket beside each other `][` is replaced with `|`.
   
-## Hello World
+# Hello World
 
 In a text editor, type: 
 
