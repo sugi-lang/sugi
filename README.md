@@ -47,13 +47,12 @@ Save this code to a file named `hello.su`. Then enter: `sugi hello.su`.
   
 `main` is the starting point of the program. 
 `println` is a built-in function thats prints the value passed to it.
+`fn main()` is not necessary in one file programs. It will be excluded in parts of this tutorial.
 
 That's it. Next let's do some simple arithmetic. 
 
 ```v
-fn main
-  + {val} sum 1 2
-#fn
++ {val} sum 1 2
 ```
 Whats going on here is that the first word of every statement (+) is a keyword, and the words coming after it are it's operands. The word (val) inside the curly brackets ({}) declares and initializes a variable as immutable. The (+) keyword has three operands. The first operand is a variable (sum) that can store a value. The last two operands are integers to be added together. Once the integers are added together, the resulting value is stored in the (sum) variable.
 
