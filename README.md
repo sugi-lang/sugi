@@ -59,22 +59,18 @@ Whats going on here is that the first word of every statement (+) is a keyword, 
 A statement can only contain one keyword. By typing more than one statement in a sequence, we can code in a sequential style. This makes reading code much easier. Lets do some other math operations.
 
 ```v
-fn main
-  + {val} sum 1 2
-  - {val} difference sum 1
-  println "The sum is $sum and the difference is $difference"
-#fn
++ {val} sum 1 2
+- {val} difference sum 1
+println "The sum is $sum and the difference is $difference"
 ```
 Here, the value stored in (sum) is used in the next statement for subtraction. Then both values of the variables (sum and difference) are used in the println statement.
 
 What if we want to make a variable mutable so that it can change values?:
 
 ```v
-fn main
-  + {var} sum 1 2
-  - sum 4 2
-  println "sum is $sum"
-#fn
++ {var} sum 1 2
+- sum 4 2
+println "sum is $sum"
 ```
 
 Here the variable (sum) stores the value 3. But since it is declared and initialized as mutable because of ({var}), the variable (sum) can store a different value. The next statement replaces the value stored in the (sum) variable with the value: 2. 
@@ -84,11 +80,9 @@ You can also multiply (*) and divide (/).
 You can specify a type for a variable by including the type to it's operands:
 
 ```v
-fn main [
-  + {var} sum i8(1) i8(2)
-  - sum 4 2
-  println "sum is $sum"
-]
++ {var} sum i8(1) i8(2)
+- sum 4 2
+println "sum is $sum"
 ```
 
 Lets create a function that accepts arguments as input and call it:
@@ -120,40 +114,32 @@ fn {in out} add [int1 i64, int2 i64 | i64]
 You can define if, else, and else_if expressions like this:
 
 ```v
-fn main
+< {val} cond_one 2 4
+> {val} cond_two 7 5
+&& {val} cond_three cond_one cond_two
 
-  < {val} cond_one 2 4
-  > {val} cond_two 7 5
-  && {val} cond_three cond_one cond_two
-
-  if cond_three
+if cond_three
     
-    println "yo"
+  println "yo"
     
-  #if else_if cond_one
+#if else_if cond_one
     
-    println "yoyo"
+  println "yoyo"
     
-  #else_if else
+#else_if else
     
-    println "yoyoyo"
+  println "yoyoyo"
     
-  #else
-    
-#fn
+#else
 ```
 
 You can assign variables to individual values like this:
     
 ```v
-fn main
+bind {var} name "bob"
+bind name "henry"
     
-    bind {var} name "bob"
-    bind name "henry"
-    
-    println "name is $name"
-    
-#fn
+println "name is $name"
 ```
     
     
