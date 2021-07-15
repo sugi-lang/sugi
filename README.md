@@ -133,7 +133,7 @@ You can assign variables to individual values like this:
     
 ```v
 bind {var} name "bob"
-bind name "henry"
+bind {use} name "henry"
     
 println "name is $name"
 ```
