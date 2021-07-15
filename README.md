@@ -42,6 +42,16 @@ Save this code to a file named `hello.su`. Then enter: `sugi hello.su`.
 `main` is the starting point of the program. 
 `println` is a built-in function thats prints the value passed to it.
 `fn main()` is not necessary in one file programs. It will be excluded in parts of this tutorial.
+  
+# Comments
+  
+```v
+// This is a single line comment
+/* 
+This is a
+multiline comment. 
+*/  
+```
 
 That's it. Next let's do some simple arithmetic. 
 
