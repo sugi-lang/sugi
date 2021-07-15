@@ -52,7 +52,29 @@ This is a
 multiline comment. 
 */  
 ```
-
+  
+# Functions
+  
+```v
+fn main
+  add {val} sum 77 33
+  println sum
+  
+  sub {val} dif 100 50
+  println dif
+#fn
+  
+fn {in out} add [x int, y int | int] 
+  + {val} sum x y
+  return sum
+#fn
+  
+fn {in out} add [x int, y int | int]
+  - {val} dif x y
+  return dif
+#fn
+```
+  
 That's it. Next let's do some simple arithmetic. 
 
 ```v
