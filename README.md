@@ -117,11 +117,11 @@ if cond_three
   println "yo"
     
 #if 
-else_if cond_one
+elif cond_one
     
   println "yoyo"
     
-#else_if 
+#elif 
 else
     
   println "yoyoyo"
