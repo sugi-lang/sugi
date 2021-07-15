@@ -75,6 +75,28 @@ fn {in out} add [x int, y int | int]
 #fn
 ```
   
+# Variables
+  
+```v
+bind {val} name 'bob'
+bind {val} age 20
+bind {val} large_number i64(9999999)
+  
+println name
+println age
+println large_number
+```
+  
+# Mutable Variables
+  
+```v
+bind {var} age 20
+println age
+  
+bind {use} age 21
+println age
+```
+  
 That's it. Next let's do some simple arithmetic. 
 
 ```v
