@@ -28,7 +28,7 @@ Then type: v run <filename of .v file>
 
 # Tutorial
   
-# Hello World
+## Hello World
 
 In a text editor, type: 
 
@@ -43,7 +43,7 @@ Save this code to a file named `hello.su`. Then enter: `sugi hello.su`.
 `println` is a built-in function thats prints the value passed to it.
 `fn main()` is not necessary in one file programs. It will be excluded in parts of this tutorial.
   
-# Comments
+## Comments
   
 ```v
 // This is a single line comment
@@ -53,7 +53,7 @@ multiline comment.
 */  
 ```
   
-# Functions
+## Functions
   
 ```v
 fn main
@@ -75,7 +75,7 @@ fn {in out} add [x int, y int | int]
 #fn
 ```
   
-# Variables
+## Variables
   
 ```v
 bind {val} name 'bob'
@@ -87,7 +87,7 @@ println age
 println large_number
 ```
   
-# Mutable Variables
+## Mutable Variables
   
 ```v
 bind {var} age 20
