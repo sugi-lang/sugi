@@ -24,15 +24,9 @@ From your terminal, change directory to your .su file.
 Enter the command: sugi <filename of .su file>.
 The program should execute.
 A .v file will be generated in the same directory.
+Then type: v run <filename of .v file>
 
 # Tutorial
-  
-# Rules of the language
-  
-1. A statement can only have one function symbol, called a keyword. 
-2. Statements containing blocks of code such as `fn` or `if` must end with the same keyword preceded by a `#`.
-3. Words inside curly braces `{}` are a function's variants and decide what operands come after a keyword and how the function behaves.
-4. Functions with a variable amount of arguments can be grouped into brackets. A right and left bracket beside each other `][` is replaced with `|`.
   
 # Hello World
 
@@ -69,7 +63,7 @@ What if we want to make a variable mutable so that it can change values?:
 
 ```v
 + {var} sum 1 2
-- sum 4 2
+- {use} sum 4 2
 println "sum is $sum"
 ```
 
@@ -81,7 +75,7 @@ You can specify a type for a variable by including the type to it's operands:
 
 ```v
 + {var} sum i8(1) i8(2)
-- sum 4 2
+- {use} sum 4 2
 println "sum is $sum"
 ```
 
