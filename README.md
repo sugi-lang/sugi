@@ -93,7 +93,7 @@ println large_number
 bind {var} age 20
 println age
   
-bind {use} age 21
+bind age 21
 println age
 ```
   
@@ -113,6 +113,21 @@ elif cond2
   println "$a > $b"
 #elif
 else
-  println "$a == $b"
+  println "$a == $b"v
 #else
 ```
+  
+## Arrays
+  
+```v
+array {val} nums 1 2 3        // declare array named nums
+  
+access {val} element nums 1   // access value in position one (not zero) of array and store it in element
+  
+replace nums 2 5              // replace value in position two of array nums with five
+  
+push nums 1 2 3               // push values 1 2 3 onto the end of array nums
+  
+```
+  
+
