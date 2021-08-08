@@ -33,9 +33,8 @@ Then type: v run <filename of .v file>
 In a text editor, type: 
 
 ```v
-fn main
-  println "Hello World!"
-#fn
+[fn] main
+  [println] "Hello World!"
 ```
 Save this code to a file named `hello.su`. Then enter: `sugi hello.su` and then `v run hello.v`.
   
@@ -56,78 +55,60 @@ multiline comment.
 ## Functions
   
 ```v
-fn main
-  add {val} sum 77 33
-  println sum
+[fn] main
+  [add :] sum 77 33
+  [println] sum
   
-  sub {val} dif 100 50
-  println dif
-#fn
+  [sub :] dif 100 50
+  [println] dif
   
-fn {in out} add [x int, y int | int] 
-  + {val} sum x y
-  return sum
-#fn
+[fn in out] {add} {x int, y int} {int} 
+  [+ :] sum x y
+  [return] sum
   
-fn {in out} add [x int, y int | int]
-  - {val} dif x y
-  return dif
-#fn
+[fn in out] {sub} {x int, y int} {int} 
+  [- :] dif x y
+  [return] sum
 ```
   
 ## Variables
   
 ```v
-bind {val} name 'bob'
-bind {val} age 20
-bind {val} large_number i64(9999999)
+[:] name 'bob'
+[:] age 20
+[:] large_number i64(9999999)
   
-println name
-println age
-println large_number
+[println] name
+[println] age
+[println] large_number
 ```
   
 ## Mutable Variables
   
 ```v
-bind {var} age 20
-println age
+[;] age 20
+[println] age
   
-bind age 21
-println age
+[=] age 21
+[println] age
 ```
   
 ## If Elif Else Statements
   
 ```v
-bind {val} a 10
-bind {val} b 20
+[:] a 10
+[:] b 20
   
-< {val} cond1 a b
-> {val} cond2 a b
+[< :] cond1 a b
+[> :] cond2 a b
   
-if cond1
-  println "$a < $b"
+[if] cond1
+  [println] "$a < $b"
 #if
-elif cond2
-  println "$a > $b"
+[elif] cond2
+  [println] "$a > $b"
 #elif
-else
-  println "$a == $b"
+[else]
+  [println] "$a == $b"
 #else
 ```
-  
-## Arrays
-  
-```v
-array {val} nums 1 2 3        // declare array named nums
-  
-access {val} element nums 1   // access value in position one (not zero) of array and store it in element
-  
-replace nums 2 5              // replace value in position two of array nums with five
-  
-push nums 1 2 3               // push values 1 2 3 onto the end of array nums
-  
-```
-  
-
