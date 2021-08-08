@@ -68,7 +68,7 @@ multiline comment.
   
 [fn in out] {sub} {x int, y int} {int} 
   [- :] dif x y
-  [return] sum
+  [return] dif
 ```
   
 ## Variables
