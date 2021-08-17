@@ -33,8 +33,8 @@ Then type: v run <filename of .v file>
 In a text editor, type: 
 
 ```v
-[fn] main
-  [println] "Hello World!"
+fn main
+  println "Hello World!"
 ```
 Save this code to a file named `hello.su`. Then enter: `sugi hello.su` and then `v run hello.v`.
   
@@ -55,60 +55,58 @@ multiline comment.
 ## Functions
   
 ```v
-[fn] main
-  [add :] sum 77 33
-  [println] sum
+fn main
+  :add sum 77 33
+  println sum
   
-  [sub :] dif 100 50
-  [println] dif
+  :sub dif 100 50
+  println dif
   
-[fn in out] {add} {x int, y int} {int} 
-  [+ :] sum x y
-  [return] sum
+fn_in_out add [x int, y int] [int] 
+  :+ sum x y
+  return sum
   
-[fn in out] {sub} {x int, y int} {int} 
-  [- :] dif x y
-  [return] dif
+fn_in_out sub [x int, y int] [int] 
+  :- dif x y
+  return dif
 ```
   
 ## Variables
   
 ```v
-[:] name 'bob'
-[:] age 20
-[:] large_number i64(9999999)
+: name 'bob'
+: age 20
+: large_number i64(9999999)
   
-[println] name
-[println] age
-[println] large_number
+println name
+println age
+println large_number
 ```
   
 ## Mutable Variables
   
 ```v
-[;] age 20
-[println] age
+; age 20
+println age
   
-[=] age 21
-[println] age
+= age 21
+println age
 ```
   
 ## If Elif Else Statements
   
 ```v
-[:] a 10
-[:] b 20
+: a 10
+: b 20
   
-[< :] cond1 a b
-[> :] cond2 a b
+:< cond1 a b
+:> cond2 a b
   
-[if] cond1
-  [println] "$a < $b"
+if cond1
+  println "$a < $b"
+elif cond2
+  println "$a > $b"
+else
+  println "$a == $b"
 #if
-[elif] cond2
-  [println] "$a > $b"
-#elif
-[else]
-  [println] "$a == $b"
-#else
 ```
