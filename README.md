@@ -54,7 +54,7 @@ Each line contains two syntax forms. The first is in sugi and the second is in v
 
 In the first line, the variable (name) is assigned to the value (bob) and is immutable. The second line is similar, but the variable is mutable. The third line reassigns the variable (age) to the value (21) because (age) is mutable.
 
-## Operators
+### Operators
 
 ```v
 :+ result 2 5    // result := 2 + 5
@@ -66,7 +66,7 @@ In the first line, the variable (name) is assigned to the value (bob) and is imm
 
 Operations such as addition are similar to variable assignment. In the first line the variable (result) is assigned to the addition of the last two values (2) and (5). The other two lines also add the last two values, but with their own ways of variable assignment.
 
-## Functions
+### Functions
 
 ```v
 fn main
@@ -85,7 +85,7 @@ fn_in_out sub [x int, y int] [int]
   return dif
 ```
 
-## If Elif (Else If) Else
+### If Elif (Else If) Else
 
 ```v
 :< cond1 10 20
@@ -99,3 +99,18 @@ else
   println "$a == $b"
 #if
 ```
+  
+### Arrays
+  
+```v
+;array nums 1 2 3          // declare array named nums
+  
+:access element nums 1     // access value in position one (not zero) of array and store it in element
+  
+replace nums 2 5           // replace value in position two of array nums with five
+  
+push nums 4 5 6            // push values 4 5 6 onto the end of array nums
+  
+println nums
+```
+
