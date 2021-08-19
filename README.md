@@ -114,3 +114,14 @@ push nums 4 5 6            // push values 4 5 6 onto the end of array nums
 println nums
 ```
 
+### Each Loop
+  
+```v
+:array names "Bob" "George" "henry"
+  
+each name names
+
+  println name
+  
+#each
+```
