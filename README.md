@@ -1,6 +1,6 @@
 ## Sugi
 
-A new type-oriented programming language with the power of lua.
+Ideas for a new type-oriented programming language with the power of lua.
 
 ## Tutorial
 
@@ -9,15 +9,7 @@ A new type-oriented programming language with the power of lua.
 In a text editor, type: 
 
 ```v
-run essential.main
-
-type essential []
-
-  fn main
-  
-    print "Hello World"
-  
-  #fn
+{fn main () <|print "Hello World!"|>}
 ```
 
 ### Comments
@@ -33,52 +25,53 @@ multiline comment.
 ### Assignment
 
 ```v
-run essential.main
-
-type essential []
-
-  fn main
-  
-    const name "Bob"
-    int age 20
-    change age 21
-    
-  #fn
+{const name () "Bob"}
+{int age (main) 20}
+{fn main () <|= age 21|>}
 ```
 ### Operators
 ```v
-run essential.main
-
-type essential []
-
-  fn main
-  
-    int sum + 3 2
-    change sum + 4 1
-  
-  #fn
+{int sum (main) [+ 3 2]}
+{fn main () <|= sum [+ 4 1]|>}
 ```
 ### Functions
 ```v
-run essential.main
+{fn main () <|add 2 5 sub 4 3|>}
+{fn add (main) <|[[left int][right int]] [int] return [+ left right]|>}
+{fn sub (main) <|[[left int][right int]] [int] return [- left right]|>}
+```
+### If Elif (else if) Else
+```v
+{fn main () 
+  <|
+    if [< 10 20]
+      print "10 < 20"
+    elif [> 10 20]
+      print "10 > 20"
+    else
+      print "10 == 20"
+    #if
+  |>}
+```
+### Arrays
+```v
+{int nums (main) 1 2 3}
+{fn main () 
+  <| 
+    {int element (main) [access nums 1]}
+    replace nums 2 5
+    push nums [4 5 6]
+    print nums
+  |>}
+```
+### Each Loop
+```v
+{string names (main) "Bob" "George" "Henry"}
 
-type essential []
-
-  fn main
-  
-    add 2 5
-    sub 4 3
-  
-  #fn
-  
-  fn_in_out add [left int | right int] [int] 
-  
-    return + left right
-  
-  #fn_in_out
-  
-  fn_in_out sub [left int | right int] [int] 
-  
-    return - left right
-  
-  #fn_in_out
+{fn main () 
+  <|
+    each [index name] names
+      print name
+    #each
+  |>}
+```
