@@ -60,7 +60,7 @@ main []
   fn [
     element [main] int [access nums 1]
     replace nums 2 5
-    push nums [4 5 6]
+    push nums 4 5 6
     print nums
   ]
 ```
