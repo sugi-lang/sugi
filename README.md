@@ -9,7 +9,7 @@ Ideas for a new type-oriented programming language with the power of lua.
 In a text editor, type: 
 
 ```v
-main [] fn [print "Hello World"]
+main [] fn [[][] print "Hello World"]
 ```
 
 ### Comments
@@ -27,23 +27,23 @@ multiline comment.
 ```v
 name [] const "Bob"
 age [main] int 20
-main [] fn [= age 21]
+main [] fn [[][] = age 21]
 ```
 ### Operators
 ```v
 sum [main] int [+ 3 2]
-main [] fn [= sum [+ 4 1]]
+main [] fn [[][] = sum [+ 4 1]]
 ```
 ### Functions
 ```v
-main [] fn [add 2 5 sub 4 3]
+main [] fn [[][] add 2 5 sub 4 3]
 add [main] fn [[int left right][int] return [+ left right]]
 sub [main] fn [[int left right][int] return [- left right]]
 ```
 ### If Elif (else if) Else
 ```v
 main []
-  fn [
+  fn [[][]
     if [< 10 20]
       print "10 < 20"
     elif [> 10 20]
@@ -68,7 +68,7 @@ main []
 ```v
 names [main] string "Bob" "George" "Henry"
 main []
-  fn [
+  fn [[][]
     each [index name] names
       print name
     #each
