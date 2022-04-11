@@ -32,7 +32,7 @@ main [] fn [= age 21]
 ### Operators
 ```v
 sum [main] int [+ 3 2]
-main [] fn [= sum [+ 4 1]
+main [] fn [= sum [+ 4 1]]
 ```
 ### Functions
 ```v
