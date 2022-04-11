@@ -37,8 +37,8 @@ main [] fn [= sum [+ 4 1]
 ### Functions
 ```v
 main [] fn [add 2 5 sub 4 3]
-add [] fn [[int left right][int] return [+ left right]]
-sub [] fn [[int left right][int] return [- left right]]
+add [main] fn [[int left right][int] return [+ left right]]
+sub [main] fn [[int left right][int] return [- left right]]
 ```
 ### If Elif (else if) Else
 ```v
