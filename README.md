@@ -67,7 +67,7 @@ multiline comment.
 :names [main] table [string "Bob" "George" "Henry"]
 :main fn [
   each [index name] names
-      print name
-    #each
+    print name
+  #each
   ]
 ```
