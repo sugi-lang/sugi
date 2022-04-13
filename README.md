@@ -50,7 +50,7 @@ fn main [
     else
       print "10 == 20"
     #if
-  ]
+]
 ```
 ### Arrays
 ```v
@@ -60,7 +60,7 @@ fn main [
   replace nums 2 5
   push nums 4 5 6
   print nums
-  ]
+]
 ```
 ### Each Loop
 ```v
@@ -69,5 +69,5 @@ fn main [
   each [index name] names
     print name
   #each
-  ]
+]
 ```
