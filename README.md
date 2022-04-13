@@ -43,13 +43,13 @@ fn sub [main] [[int x y][int] return [- x y]]
 ### If Elif (else if) Else
 ```v
 fn main [
-  if [< 10 20]
+  if [< 10 20] [
     print "10 < 20"
-  elif [> 10 20]
+  ] elif [> 10 20] [
     print "10 > 20"
-  else
+  ] else [
     print "10 == 20"
-  #if
+  ]
 ]
 ```
 ### Arrays
@@ -66,8 +66,8 @@ fn main [
 ```v
 table names [main] [string "Bob" "George" "Henry"]
 fn main [
-  each [index name] names
+  each [index name] names [
     print name
-  #each
+  ]
 ]
 ```
