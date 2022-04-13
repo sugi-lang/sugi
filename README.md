@@ -9,7 +9,7 @@ Ideas for a new type-oriented programming language with the power of lua.
 In a text editor, type: 
 
 ```v
-;main [] fn [[][] print "Hello World"]
+:main fn [print "Hello World!"]
 ```
 
 ### Comments
@@ -25,26 +25,25 @@ multiline comment.
 ### Assignment
 
 ```v
-;name [] const "Bob"
-;age [main] int 20
-;main [] fn [[][] = age 21]
+:name const "Bob"
+:age [main] int 20
+:main fn [= age 21]
 ```
 ### Operators
 ```v
-;sum [main] int [+ 3 2]
-;main [] fn [[][] = sum [+ 4 1]]
+:sum [main] int [+ 3 2]
+:main fn [= sum [+ 4 1]]
 ```
 ### Functions
 ```v
-;main [] fn [[][] add 2 5 sub 4 3]
-;add [main] fn [[int left right][int] return [+ left right]]
-;sub [main] fn [[int left right][int] return [- left right]]
+:main fn [add 2 5 sub 4 3]
+:add [main] fn [[int x y][int] return [+ x y]]
+:sub [main] fn [[int x y][int] return [- x y]]
 ```
 ### If Elif (else if) Else
 ```v
-;main []
-  fn [[][]
-    if [< 10 20]
+:main fn [
+  if [< 10 20]
       print "10 < 20"
     elif [> 10 20]
       print "10 > 20"
@@ -55,21 +54,19 @@ multiline comment.
 ```
 ### Arrays
 ```v
-;nums [main] int 1 2 3
-;main []
-  fn [[][]
-    ;element [main] int [access nums 1]
-    replace nums 2 5
-    push nums 4 5 6
-    print nums
+:nums [main] table [1 2 3]
+:main fn [
+  :element [main] int [access nums 1]
+  replace nums 2 5
+  push nums 4 5 6
+  print nums
   ]
 ```
 ### Each Loop
 ```v
-;names [main] string "Bob" "George" "Henry"
-;main []
-  fn [[][]
-    each [index name] names
+:names [main] table [string "Bob" "George" "Henry"]
+:main fn [
+  each [index name] names
       print name
     #each
   ]
