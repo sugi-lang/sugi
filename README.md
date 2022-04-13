@@ -54,7 +54,7 @@ fn main [
 ```
 ### Arrays
 ```v
-table nums [main] [1 2 3]
+table nums [main] [int 1 2 3]
 fn main [
   int element [main] [access nums 1]
   replace nums 2 5
