@@ -26,12 +26,12 @@ multiline comment.
 
 ```v
 const name () "Bob"
-int age (main) 20
+num age (main) 20
 fn main () <|[][] = age 21|>
 ```
 ### Operators
 ```v
-int sum (main) [+ 3 2]
+num sum (main) [+ 3 2]
 fn main () <|[][] = sum [+ 4 1]|>
 ```
 ### Functions
