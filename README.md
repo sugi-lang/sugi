@@ -31,7 +31,7 @@ multiline comment.
 ```
 ### Operators
 ```v
-:sum (main) [num] {+ 3 2}
+:sum (main) [num] + 3 2
 :main () [fn] {= sum + 4 1}
 ```
 ### Functions
@@ -40,8 +40,8 @@ multiline comment.
 :y (add) [num] 5
 :x (sub) [num] 4
 :y (sub) [num] 3
-:add (main) [num] {+ x y}
-:sub (main) [num] {- x y}
+:add (main) [num] + x y
+:sub (main) [num] - x y
 :main () [fn] {add sub}
 ```
 ### If Elif (else if) Else
@@ -59,7 +59,7 @@ multiline comment.
 ### Arrays
 ```v
 :nums (main) [int] 1 2 3
-:element (main) [num] {access nums 1}
+:element (main) [num] access nums 1
 :main () [fn] {
   replace nums 2 5
   push nums 4 5 6
