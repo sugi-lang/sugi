@@ -9,7 +9,7 @@ Ideas for a new type-oriented programming language with the power of lua.
 In a text editor, type: 
 
 ```v
-fn main () <|[][] print "Hello World!"|>
+:main () [fn] {print "Hello World!"}
 ```
 
 ### Comments
@@ -25,49 +25,53 @@ multiline comment.
 ### Assignment
 
 ```v
-const name () "Bob"
-num age (main) 20
-fn main () <|[][] = age 21|>
+:name () [const] "Bob"
+:age (main) [num] 20
+:main () [fn] {= age 21}
 ```
 ### Operators
 ```v
-num sum (main) [+ 3 2]
-fn main () <|[][] = sum [+ 4 1]|>
+:sum (main) [num] {+ 3 2}
+:main () [fn] {= sum + 4 1}
 ```
 ### Functions
 ```v
-fn main () <|[][] add 2 5 sub 4 3|>
-fn add (main) <|[int x y][int] return [+ x y]|>
-fn sub (main) <|[int x y][int] return [- x y]|>
+:x (add) [num] 2
+:y (add) [num] 5
+:x (sub) [num] 4
+:y (sub) [num] 3
+:add (main) [num] {+ x y}
+:sub (main) [num] {- x y}
+:main () [fn] {add sub}
 ```
 ### If Elif (else if) Else
 ```v
-fn main () <|[][]
-  if [< 10 20] [
+:main () [fn] {
+  if < 10 20 {
     print "10 < 20"
-  ] elif [> 10 20] [
+  } elif > 10 20 {
     print "10 > 20"
-  ] else [
+  } else {
     print "10 == 20"
-  ]
-|>
+  }
+}
 ```
 ### Arrays
 ```v
-table nums (main) {int 1 2 3}
-fn main () <|[][]
-  num element (main) [access nums 1]
+:nums (main) [int] 1 2 3
+:element (main) [num] {access nums 1}
+:main () [fn] {
   replace nums 2 5
   push nums 4 5 6
   print nums
-|>
+}
 ```
 ### Each Loop
 ```v
-table names (main) {string "Bob" "George" "Henry"}
-fn main () <|[][]
-  each [index name] names [
+:names (main) [string] "Bob" "George" "Henry"
+:main () [fn] {
+  each index name names {
     print name
-  ]
-|>
+  }
+}
 ```
