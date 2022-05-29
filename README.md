@@ -41,8 +41,8 @@ fn main () {
 ```
 ### Functions
 ```v
-fn add (main) {print + x y}
-fn sub (main) {print - x y}
+fn add (main) {int sum (main) + x y}
+fn sub (main) {int dif (main) - x y}
 fn main () {
 
   int x (add) 2
@@ -50,7 +50,8 @@ fn main () {
   int x (sub) 4
   int y (sub) 3
   
-  add sub
+  print sum 
+  print dif
 }
 ```
 ### If Elif (else if) Else
