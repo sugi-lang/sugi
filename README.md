@@ -9,7 +9,9 @@ Ideas for a new type-oriented programming language.
 In a text editor, type: 
 
 ```v
-fn main () {print "Hello World!"}
+{ main [][]
+  print "Hello World"
+}
 ```
 
 ### Comments
@@ -25,53 +27,50 @@ multiline comment.
 ### Assignment
 
 ```v
-fn main () {
-  const name (main) "Bob"
-  int age (main) 20
-  = age 20
+{ main [][]
+  const name "Bob"
+  int age 20
+  = age 21
 }
 ```
 
 ### Operators
 ```v
-fn main () {
-  int sum (main) + 3 2
+{ main [][]
+  int sum + 3 2
   = sum + 4 1
 }
 ```
 ### Functions
 ```v
-fn add (main) {int sum (main) + x y}
-fn sub (main) {int dif (main) - x y}
-fn main () {
-
-  int x (add) 2
-  int y (add) 5
-  int x (sub) 4
-  int y (sub) 3
-  
-  print sum 
-  print dif
+{ add [int x y][int]
+  return sum + x y
+}
+{ sub [int x y][int]
+  return dif - x y
+}
+{ main [][]
+  print add 2 5
+  print sub 4 3
 }
 ```
 ### If Elif (else if) Else
 ```v
-fn main () {
-  if < 10 20 {
-    print "10 < 20
-  } elif > 10 20 {
+{ main [][]
+  if < 10 20 [
+    print "10 < 20"
+  ] elif > 10 20 [
     print "10 > 20"
-  } else {
+  ] else [
     print "10 == 20"
-  }
+  ]
 }
 ```
 ### Arrays
 ```v
-
-fn main () {
-  int nums (main) 1 2 3
-  int element (main) access nums 1
+{ main [][]
+  int nums 1 2 3
+  int element access nums 1
   replace nums 2 5
   push nums 4 5 6
   print nums
@@ -79,10 +78,10 @@ fn main () {
 ```
 ### Each Loop
 ```v
-fn main () {
-  string names (main) "Bob" "George" "Henry"
-  each index name names {
+{ main [][]
+  string names "Bob" "George" "Henry"
+  each index name names [
     print name
-  }
+  ]
 }
 ```
