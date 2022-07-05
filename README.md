@@ -35,20 +35,20 @@ fn main ()()
 ### Operators
 ```v
 fn main ()()
-  [int sum + 3 2]
-  [change int sum + 4 1]
+  [int sum [+ 3 2]]
+  [change int sum [+ 4 1]]
 ```
 ### Functions
 ```v
 fn add (int x y)(int)
-  [return + x y]
+  [return [+ x y]]
 
 fn sub (int x y)(int)
-  [return - x y]
+  [return [- x y]]
   
 fn main ()()
-  [println add 2 5]
-  [println sub 4 3]
+  [println [add 2 5]]
+  [println [sub 4 3]]
 ```
 ### If Elif (else if) Else
 ```v
