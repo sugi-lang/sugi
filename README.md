@@ -75,6 +75,6 @@ fn main [][]
 fn main [][]
   [string names "Bob" "George" "Henry"]
   [each index name names
-    print name
+    [print name]
   ]
 ```
