@@ -9,9 +9,8 @@ Ideas for a new type-oriented programming language.
 In a text editor, type: 
 
 ```v
-{ main [][]
-  print "Hello World"
-}
+fn main [][]
+  print "hello world"
 ```
 
 ### Comments
@@ -27,36 +26,33 @@ multiline comment.
 ### Assignment
 
 ```v
-{ main [][]
-  const name "Bob"
+fn main [][]
+  #int name "Bob"
   int age 20
-  = age 21
-}
+  $int age 21
 ```
 
 ### Operators
 ```v
-{ main [][]
+fn main [][]
   int sum + 3 2
-  = sum + 4 1
-}
+  $int sum + 4 1
 ```
 ### Functions
 ```v
-{ add [int x y][int]
-  return sum + x y
-}
-{ sub [int x y][int]
-  return dif - x y
-}
-{ main [][]
-  print add 2 5
-  print sub 4 3
-}
+fn add [int x y][int]
+  return + x y
+
+fn sub [int x y][int]
+  return - x y
+  
+fn main [][]
+  println add 2 5
+  println sub 4 3
 ```
 ### If Elif (else if) Else
 ```v
-{ main [][]
+fn main [][]
   if < 10 20 [
     print "10 < 20"
   ] elif > 10 20 [
@@ -64,24 +60,21 @@ multiline comment.
   ] else [
     print "10 == 20"
   ]
-}
 ```
 ### Arrays
 ```v
-{ main [][]
+fn main [][]
   int nums 1 2 3
   int element access nums 1
   replace nums 2 5
   push nums 4 5 6
   print nums
-}
 ```
 ### Each Loop
 ```v
-{ main [][]
+fn main [][]
   string names "Bob" "George" "Henry"
   each index name names [
     print name
   ]
-}
 ```
