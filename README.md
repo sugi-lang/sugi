@@ -65,7 +65,7 @@ fn main [][]
 ```v
 fn main [][]
   int nums 1 2 3
-  int element access nums 1
+  #int element access nums 1
   replace nums 2 5
   push nums 4 5 6
   print nums
