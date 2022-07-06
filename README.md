@@ -53,9 +53,9 @@ fn main ()()
 ### If Elif (else if) Else
 ```v
 fn main ()()
-  [if < 10 20
+  [if [< 10 20]
     [print "10 < 20"]
-  ][elif > 10 20
+  ][elif [> 10 20]
     [print "10 > 20"]
   ][else
     [print "10 == 20"]
